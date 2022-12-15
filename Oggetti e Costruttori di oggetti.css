@@ -1,0 +1,87 @@
+ h1{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #f3f3f3;
+} 
+.container {
+    background-color: #384960;
+    display: flex;
+    justify-content:space-around;
+    padding: 10px;
+}
+button {
+    font-size: 30px;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+    color:#f3f3f3;
+    background-color: #3d7caf;
+    /* transform: rotate(180deg);  */
+} 
+button:hover {
+    background-color: rgba(175, 240, 106, 0.609);
+    transition: 0.2s;
+} 
+.container2 {
+    background-color:#3d7caf;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+}
+.module {
+    background-color: #f3f3f3;
+    margin-top: 20px;
+    border: 2px solid#3d7caf;
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+h2 {
+    font-size: 40px;
+    color: #3d7caf;
+}
+.mainForm {
+    display: grid;
+    height: 400px;
+    color: #3d7caf;
+    /* margin-top: 30px; */
+}
+#form,#form1,#form2,#form3 {
+    display: flex;
+    flex-direction: column;
+} 
+input {
+    width: 350px;
+    height:30px;
+} 
+select {
+     width: 357px;
+     height: 38px;
+}
+.submit{
+    display: flex;
+    justify-content: space-around;
+}
+input.confirm{
+    background-color: #3d7caf;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f3f3f3;
+    width: 150px;
+    border-radius: 7px;
+}
+input.cancel{
+    background-color: #3d7caf;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f3f3f3;
+    width: 150px;
+    border-radius: 7px;
+}
+
