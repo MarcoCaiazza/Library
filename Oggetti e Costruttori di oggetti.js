@@ -1,22 +1,18 @@
 const btnBook = document.querySelector("#btn");
-const module = document.querySelector(".module");
-const cancel = document.querySelector(".cancel");
+const moduleBook = document.querySelector(".moduleBook");
+const cancel = document.querySelector("#cancel");
 
+moduleBook.style.display = "none";
 const createTable = () => {
-  const module = document.querySelector(".module");
-  if (module.style.display === "none") {
-    module.style.display = "flex";
+  const moduleBook = document.querySelector(".moduleBook");
+  if (moduleBook.style.display === "none") {
+    moduleBook.style.display = "flex";
   }
 };
+
 btnBook.addEventListener("click", createTable);
-module.style.display = "none";
-const cancelForm = () => {
-  module.style.display = "none";
+
+const cancelModuleBook = () => {
+  moduleBook.style.display = "none";
 };
-cancel.addEventListener("click", cancelForm);
-
-let myLibrary = [];
-
-function Book() {}
-
-function addBookToLibrary() {}
+cancel.addEventListener("click", cancelModuleBook);
