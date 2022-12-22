@@ -1,15 +1,13 @@
-  h1{
+h1{
     font-family:Arial, Helvetica, sans-serif;
     color: #f3f3f3;
 } 
-
 .containerH1 {
     background-color: #384960;
     display: flex;
     justify-content:space-around;
     padding: 10px;
 }
-
 button {
     font-size: 30px;
     height: 40px;
@@ -19,19 +17,16 @@ button {
     color:#f3f3f3;
     background-color: #3d7caf;
 } 
-
 button:hover {
     background-color: rgba(175, 240, 106, 0.609);
     transition: 0.2s;
 } 
-
 .containerLibrary {
     background-color:#3d7caf;
     height: 900px;
     display: flex;
     justify-content: center;
 }
-
 .moduleBook{
     font-family: Arial, Helvetica, sans-serif;
     height: 500px;
@@ -42,6 +37,7 @@ button:hover {
     color:#3d7caf;
     font-size: bold;
     display: flex;
+    margin-top: 100px;
 }
 h2 {
     display: flex;
@@ -59,9 +55,10 @@ select {
 }
 .submit-wrapper{
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
+    /* align-items: center; */
 }
- #conf,#canc{
+#conf{
      background-color: #3d7caf;
      font-size: large;
      font-family: Arial, Helvetica, sans-serif;
@@ -69,9 +66,19 @@ select {
      border-radius: 7px;
      width: 150px;
      font-weight: bold;
- }
-
- .contentBook {
+}
+#canc{
+    background-color: #3d7caf;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f3f3f3;
+    border-radius: 7px;
+    width: 150px;
+    height: 30px;
+    font-weight: bold;
+    /* margin-bottom: 20px; */
+}
+.contentBook {
     width: 200px;
     background-color: #384960;
     color: #f3f3f3;
@@ -79,10 +86,9 @@ select {
     width: 230px;
     border-radius: 20px;
     margin-top: 100px;
- }
- 
- p{
+}
+p{
     padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
- }
+}

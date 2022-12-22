@@ -2,7 +2,6 @@ const btnBook = document.querySelector("#btn");
 const moduleBook = document.querySelector(".moduleBook");
 const cancelModule = document.querySelector("#canc");
 const containerLibrary = document.querySelector(".containerLibrary");
-const form = document.getElementById("form");
 
 moduleBook.style.display = "none";
 const createTable = () => {
@@ -24,21 +23,23 @@ class BookInfo {
     this.read = read;
   }
 }
-
 const submitForm = (e) => {
   e.preventDefault();
   let title = document.getElementById("title").value;
   let author = document.getElementById("author").value;
   let pages = document.getElementById("pages").value;
   let read = document.getElementById("read").value;
-
   myBooks();
 };
 
+const cancelOperationModule = () => {
+  moduleBook.style.display = "none";
+};
+
 form.addEventListener("submit", submitForm);
+canc.addEventListener("click", cancelOperationModule);
 
 const myBooks = () => {
-  let book = new BookInfo(title, author, pages, read);
   let contentBook = document.createElement("div");
   contentBook.className = "contentBook";
   containerLibrary.appendChild(contentBook);
@@ -46,10 +47,11 @@ const myBooks = () => {
   let parAuthor = document.createElement("p");
   let parPages = document.createElement("p");
   let parRead = document.createElement("p");
+  let book = new BookInfo(title, author, pages, read);
   let contentTitle = document.createTextNode("Title: " + book.title.value);
-  let contentAuthor = document.createTextNode("Author: " + book.author);
-  let contentPages = document.createTextNode("Pages: " + book.pages);
-  let contentRead = document.createTextNode("Read ? : " + book.read);
+  let contentAuthor = document.createTextNode("Author: " + book.author.value);
+  let contentPages = document.createTextNode("Pages: " + book.pages.value);
+  let contentRead = document.createTextNode("Read ? : " + book.read.value);
   parTitle.appendChild(contentTitle);
   parAuthor.appendChild(contentAuthor);
   parPages.appendChild(contentPages);
