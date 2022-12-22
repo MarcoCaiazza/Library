@@ -13,43 +13,54 @@
       <button id="btn">+</button>
     </div>
     <div class="containerLibrary">
-      <form class="moduleBook">
-        <h2>Add New Book</h2>
-        <div class="title-wrapper">
-          <label for="title"><strong>Title</strong></label
-          ><br />
-          <input
-            type="text"
-            name="title"
-            id="title"
-            placeholder="Jurassic Park"
-          />
-        </div>
-        <div class="author-wrapper">
-          <label for="author"><strong>Author</strong></label> <br />
-          <input
-            type="text"
-            name="author"
-            id="author"
-            placeholder="Steven Spielberg"
-          />
-        </div>
-        <div class="page-wrapper">
-          <label for="pages"><strong>Number of Pages</strong></label> <br />
-          <input type="text" name="pages" id="pages" placeholder="Pages 419" />
-        </div>
-        <div class="read-wrapper">
-          <label for="read"><strong>Read?</strong></label> <br />
-          <select id="read">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </div>
-        <div class="submit-wrapper">
-          <input type="submit" value="Confirm" id="conf" />
-          <input type="submit" value="Cancel" id="canc" />
-        </div>
-      </form>
+      <div class="moduleBook">
+        <form id="form" action="#" name="form">
+          <h2>Add New Book</h2>
+          <div class="title-wrapper">
+            <label for="title"><strong>Title</strong></label
+            ><br />
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Jurassic Park"
+            />
+          </div>
+          <br />
+          <div class="author-wrapper">
+            <label for="author"><strong>Author</strong></label> <br />
+            <input
+              type="text"
+              name="author"
+              id="author"
+              placeholder="Steven Spielberg"
+            />
+          </div>
+          <br />
+          <div class="page-wrapper">
+            <label for="pages"><strong>Number of Pages</strong></label> <br />
+            <input
+              type="text"
+              name="pages"
+              id="pages"
+              placeholder="Pages 419"
+            />
+          </div>
+          <br />
+          <div class="read-wrapper">
+            <label for="read"><strong>Read?</strong></label> <br />
+            <select id="read" name="read">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <br />
+          <div class="submit-wrapper">
+            <input type="submit" value="Confirm" id="conf" />
+            <input type="submit" value="Cancel" id="canc" />
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 
