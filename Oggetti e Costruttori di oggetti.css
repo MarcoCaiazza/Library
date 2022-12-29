@@ -22,10 +22,10 @@ button:hover {
     transition: 0.2s;
 } 
 .containerLibrary {
-    background-color:#3d7caf;
-    height: 900px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 .moduleBook{
     font-family: Arial, Helvetica, sans-serif;
@@ -33,16 +33,18 @@ button:hover {
     width: 400px;
     border-radius: 20px;
     padding: 20px;
-    background-color: #f3f3f3;
-    color:#3d7caf;
+    background-color:#3d7caf;
+    color:#f3f3f3;
     font-size: bold;
-    display: flex;
+    /* display: flex; */
     margin-top: 100px;
+    position: absolute;
+    z-index: 1;
 }
 h2 {
     display: flex;
     justify-content: center;
-    color: #3d7caf;
+    color: white;
     font-size: 35px;
 }
 input {
@@ -56,39 +58,51 @@ select {
 .submit-wrapper{
     display: flex;
     justify-content:space-around;
-    /* align-items: center; */
 }
 #conf{
-     background-color: #3d7caf;
+     background-color:white;
      font-size: large;
      font-family: Arial, Helvetica, sans-serif;
-     color: #f3f3f3;
+     color: #3d7caf;
      border-radius: 7px;
      width: 150px;
      font-weight: bold;
 }
 #canc{
-    background-color: #3d7caf;
+    background-color: white;
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
-    color: #f3f3f3;
+    color: #3d7caf;
     border-radius: 7px;
     width: 150px;
     height: 30px;
     font-weight: bold;
-    /* margin-bottom: 20px; */
 }
 .contentBook {
     width: 200px;
-    background-color: #384960;
+    background-color:  #3d7caf;
     color: #f3f3f3;
-    height: 300px;
-    width: 230px;
+    height: 260px;
+    width: 260px;
     border-radius: 20px;
     margin-top: 100px;
+    font-size: 20px; 
+    box-shadow: -8px -8px 10px #8a8a8a; 
 }
 p{
-    padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    margin-left: 10px;
+    padding: 2px;
 }
+.divImages { 
+    display: flex;
+    justify-content:space-between;
+    height: 25px;
+    width: 260px;
+}
+img{
+    width: auto;
+    height: 25px;
+    padding: 10px
+} 
