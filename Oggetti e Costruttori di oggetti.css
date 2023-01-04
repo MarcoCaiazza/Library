@@ -36,7 +36,6 @@ button:hover {
     background-color:#3d7caf;
     color:#f3f3f3;
     font-size: bold;
-    /* display: flex; */
     margin-top: 100px;
     position: absolute;
     z-index: 1;
@@ -60,23 +59,22 @@ select {
     justify-content:space-around;
 }
 #conf{
-     background-color:white;
-     font-size: large;
+    background-color:white;
+    font-size: large;
      font-family: Arial, Helvetica, sans-serif;
      color: #3d7caf;
      border-radius: 7px;
      width: 150px;
      font-weight: bold;
-}
-#canc{
-    background-color: white;
+    }
+    #canc{
+        background-color: white;
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
     color: #3d7caf;
     border-radius: 7px;
     width: 150px;
-    height: 30px;
-    font-weight: bold;
+    height: 30px;font-weight: bold;
 }
 .contentBook {
     width: 200px;
@@ -95,14 +93,33 @@ p{
     margin-left: 10px;
     padding: 2px;
 }
+p:hover{ 
+    color: rgba(136, 203, 64, 0.609);
+    background-color: #3d7caf;
+    transition: 0.2s;
+}
 .divImages { 
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 20px;
     height: 25px;
     width: 260px;
 }
 img{
     width: auto;
     height: 25px;
-    padding: 10px
+    padding: 10px;
+    display: inline-block;
+    border-radius: 20px;
 } 
+img:hover {
+    background-color: rgba(136, 203, 64, 0.609);
+    transition: 0.28s;
+}
+.line {
+    margin-top: 15px;
+    height: 3px;
+    width: 260px;
+    background-color: rgba(136, 203, 64, 0.609);
+}
