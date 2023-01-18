@@ -1,25 +1,26 @@
 const btnBook = document.querySelector("#btn");
 const moduleBook = document.querySelector(".moduleBook");
 const containerLibrary = document.querySelector(".containerLibrary");
+const containerH1 = document.querySelector(".containerH1");
 
+containerH1.appendChild(moduleBook);
 moduleBook.style.display = "none";
 
-const createModule = () => {
-  const moduleBook = document.querySelector(".moduleBook");
-  if (moduleBook.style.display === "none") {
+let lastBook;
+let myLibrary = [];
+
+let createModule = () => {
+  if (containerH1.innerHTML !== "") {
     moduleBook.style.display = "flex";
   }
 };
 const removeModule = () => {
-  if (moduleBook.style.display) {
+  if (moduleBook.style.display === "flex") {
     moduleBook.style.display = "none";
     document.getElementById("form").reset();
   }
 };
-
 btnBook.addEventListener("click", createModule);
-
-let myLibrary = [];
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -27,7 +28,7 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
-const takeBookInfo = () => {
+const getBookInfo = () => {
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
     let book = new Book(title.value, author.value, pages.value, read.value);
@@ -37,11 +38,14 @@ const takeBookInfo = () => {
     removeModule();
   });
 };
-takeBookInfo();
+getBookInfo();
 
 const addBookToLibrary = () => {
+  containerLibrary.innerHTML = "";
   for (let i = 0; i < myLibrary.length; i++) {
-    displayBook(myLibrary[i]);
+    if (myLibrary[i] !== lastBook) {
+      displayBook(myLibrary[i]);
+    }
   }
 };
 
@@ -67,23 +71,3 @@ const displayBook = (book) => {
 
   containerLibrary.appendChild(myBook);
 };
-
-// addBookToLibrary();
-// myLibrary.forEach(function (element) {
-
-// let myBook = document.createElement("div");
-// myBook.className = "myBook";
-// myBook.innerHTML =
-//   "Title: " +
-//   item.title +
-//   "<br />" +
-//   "Author: " +
-//   item.author +
-//   "<br />" +
-//   "Pages: " +
-//   item.pages +
-//   "<br />" +
-//   "Read: " +
-//   item.read;
-// containerLibrary.appendChild(myBook);
-// });
