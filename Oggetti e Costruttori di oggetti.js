@@ -2,7 +2,10 @@ const btnBook = document.querySelector("#btn");
 const moduleBook = document.querySelector(".moduleBook");
 const containerLibrary = document.querySelector(".containerLibrary");
 const containerH1 = document.querySelector(".containerH1");
+const read = document.querySelector("#read");
+localStorage.getItem("saveBooks");
 
+// const res = localStorage.getItem("book");
 containerH1.appendChild(moduleBook);
 moduleBook.style.display = "none";
 
@@ -28,12 +31,13 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
+// this.read = read.charAt(0).toUpperCase() + read.slice(1);
 const getBookInfo = () => {
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
     let book = new Book(title.value, author.value, pages.value, read.value);
     myLibrary.push(book);
-    console.log(myLibrary);
+    // console.log(myLibrary);
     addBookToLibrary();
     removeModule();
   });
@@ -52,7 +56,7 @@ const addBookToLibrary = () => {
 const displayBook = (book, i) => {
   let myBook = document.createElement("div");
   myBook.setAttribute("data-id", i);
-  console.log(myBook.setAttribute("data-id", i));
+  // console.log(myBook.setAttribute("data-id", i));
   myBook.className = "myBook";
 
   let bookTitle = document.createElement("p");
@@ -69,7 +73,6 @@ const displayBook = (book, i) => {
 
   let bookRead = document.createElement("p");
   bookRead.textContent = `Read: ${book.read}`;
-  bookRead.setAttribute("data-id", book.read);
   myBook.appendChild(bookRead);
 
   let divImages = document.createElement("div");
@@ -94,4 +97,17 @@ const displayBook = (book, i) => {
     console.log(myLibrary);
     addBookToLibrary();
   });
+
+  glassesImg.addEventListener("click", function () {
+    const changeOptionYes = read.options[0].value;
+    const changeOptionNo = read.options[1].value;
+    if (read.value === "Yes") {
+      read.value = changeOptionNo;
+      bookRead.textContent = `Read: ${changeOptionNo}`;
+    } else {
+      read.value = changeOptionYes;
+      bookRead.textContent = `Read: ${changeOptionYes}`;
+    }
+  });
 };
+// localStorage.getItem("saveBooks");
