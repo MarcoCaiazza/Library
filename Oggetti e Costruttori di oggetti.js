@@ -3,9 +3,7 @@ const moduleBook = document.querySelector(".moduleBook");
 const containerLibrary = document.querySelector(".containerLibrary");
 const containerH1 = document.querySelector(".containerH1");
 const read = document.querySelector("#read");
-localStorage.getItem("saveBooks");
 
-// const res = localStorage.getItem("book");
 containerH1.appendChild(moduleBook);
 moduleBook.style.display = "none";
 
@@ -31,13 +29,11 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
-// this.read = read.charAt(0).toUpperCase() + read.slice(1);
 const getBookInfo = () => {
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
     let book = new Book(title.value, author.value, pages.value, read.value);
     myLibrary.push(book);
-    // console.log(myLibrary);
     addBookToLibrary();
     removeModule();
   });
@@ -51,12 +47,13 @@ const addBookToLibrary = () => {
       displayBook(myLibrary[i], i);
     }
   }
+  localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+  const storedMyLibrary = JSON.parse(localStorage.getItem("myLibrary"));
 };
 
 const displayBook = (book, i) => {
   let myBook = document.createElement("div");
   myBook.setAttribute("data-id", i);
-  // console.log(myBook.setAttribute("data-id", i));
   myBook.className = "myBook";
 
   let bookTitle = document.createElement("p");
@@ -110,4 +107,6 @@ const displayBook = (book, i) => {
     }
   });
 };
-// localStorage.getItem("saveBooks");
+
+// localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+// const storedMyLibrary = JSON.parse(localStorage.getItem("myLibrary"));
