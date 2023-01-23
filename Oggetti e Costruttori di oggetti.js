@@ -3,6 +3,7 @@ const moduleBook = document.querySelector(".moduleBook");
 const containerLibrary = document.querySelector(".containerLibrary");
 const containerH1 = document.querySelector(".containerH1");
 const read = document.querySelector("#read");
+const deleteBtn = document.querySelector("#canc");
 
 containerH1.appendChild(moduleBook);
 moduleBook.style.display = "none";
@@ -23,6 +24,8 @@ const removeModule = () => {
   }
 };
 btnBook.addEventListener("click", createModule);
+
+deleteBtn.addEventListener("click", removeModule);
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -115,4 +118,3 @@ if (localStorage.getItem("myLibrary")) {
     displayBook(myLibrary[i], i);
   }
 }
-console.log(myLibrary);
