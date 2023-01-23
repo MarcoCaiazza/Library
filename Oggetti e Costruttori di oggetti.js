@@ -9,6 +9,7 @@ moduleBook.style.display = "none";
 
 let lastBook;
 let myLibrary = [];
+console.log(myLibrary);
 
 let createModule = () => {
   if (containerH1.innerHTML !== "") {
@@ -48,7 +49,6 @@ const addBookToLibrary = () => {
     }
   }
   localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
-  const storedMyLibrary = JSON.parse(localStorage.getItem("myLibrary"));
 };
 
 const displayBook = (book, i) => {
@@ -96,8 +96,8 @@ const displayBook = (book, i) => {
   });
 
   glassesImg.addEventListener("click", function () {
-    const changeOptionYes = read.options[0].value;
-    const changeOptionNo = read.options[1].value;
+    let changeOptionYes = read.options[0].value;
+    let changeOptionNo = read.options[1].value;
     if (read.value === "Yes") {
       read.value = changeOptionNo;
       bookRead.textContent = `Read: ${changeOptionNo}`;
@@ -108,5 +108,11 @@ const displayBook = (book, i) => {
   });
 };
 
-// localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
-// const storedMyLibrary = JSON.parse(localStorage.getItem("myLibrary"));
+localStorage.getItem("myLibrary");
+myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
+if (localStorage.getItem("myLibrary")) {
+  for (let i = 0; i < myLibrary.length; i++) {
+    displayBook(myLibrary[i], i);
+  }
+}
+console.log(myLibrary);
