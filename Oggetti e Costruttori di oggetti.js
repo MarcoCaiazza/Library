@@ -53,7 +53,6 @@ const addBookToLibrary = () => {
   }
   localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
 };
-
 const displayBook = (book, i) => {
   let myBook = document.createElement("div");
   myBook.setAttribute("data-id", i);

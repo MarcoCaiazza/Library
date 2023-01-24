@@ -101,7 +101,6 @@ select {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
 }
-
 #confirm:hover {
     background-color: rgb(255, 178, 34);
     transition: 0.2s;
@@ -116,7 +115,6 @@ select {
     display: flex;
     justify-content: space-around;
 }
-
 img {
     border-radius: 10px;
     background-color:#2a76b5;
