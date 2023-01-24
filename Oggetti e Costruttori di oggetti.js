@@ -43,7 +43,6 @@ const getBookInfo = () => {
   });
 };
 getBookInfo();
-
 const addBookToLibrary = () => {
   containerLibrary.innerHTML = "";
   for (let i = 0; i < myLibrary.length; i++) {
@@ -96,7 +95,6 @@ const displayBook = (book, i) => {
     console.log(myLibrary);
     addBookToLibrary();
   });
-
   glassesImg.addEventListener("click", function () {
     let changeOptionYes = read.options[0].value;
     let changeOptionNo = read.options[1].value;
