@@ -115,3 +115,5 @@ if (localStorage.getItem("myLibrary")) {
     displayBook(myLibrary[i], i);
   }
 }
+
+console.log("test");
