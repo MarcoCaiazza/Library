@@ -37,6 +37,7 @@ const getBookInfo = () => {
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
     let book = new Book(title.value, author.value, pages.value, read.value);
+    console.log({ myLibrary, book });
     myLibrary.push(book);
     addBookToLibrary();
     removeModule();
