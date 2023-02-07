@@ -108,13 +108,12 @@ const displayBook = (book, i) => {
     }
   });
 };
-
+if (myLibrary.length === 0 && localStorage.myLibrary) {
+  myLibrary = JSON.parse(localStorage.myLibrary);
+}
 localStorage.getItem("myLibrary");
-myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
 if (localStorage.getItem("myLibrary")) {
   for (let i = 0; i < myLibrary.length; i++) {
     displayBook(myLibrary[i], i);
   }
 }
-
-console.log("test");
